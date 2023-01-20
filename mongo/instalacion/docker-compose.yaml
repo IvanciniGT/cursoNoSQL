@@ -1,0 +1,43 @@
+# Vamos a usar una herramienta llamada DOCKER para instalar mongo, neo4j y jupyter
+# Docker es una herramiemnta que permite trabajar con "contenedores"
+# Los contenedores es la forma preferida a día de hoy de instalar software
+# Al instalar un programa mediante contenedores, lo que hacemos es descargar de internet
+
+# Instalar MongoDB en vuestra máquina:
+# 0º Dependencias / requisitos / configuraciones
+# 1º Descargar de internet el MONGO? No... un instalador de MONGO !
+# 2º Ejecutaría el instalador... donde tendría que configruar seguramente algunas cosas... de las que no tendría mucha idea.
+# 3º Ejecuto
+
+# C:\Archivos de programa\MongoDB -> zip -> email -> descomprimís en la misma ruta en vuestro PC... os funciona? 
+# Ni de coña ! Pues esto es lo que hacemos con los contenedores.
+
+# Lo que descargo es un triste fichero comprimido que lleva dentro una instalación YA REALIZADA por alguien (fabricante)
+# Junto con sus dependencias y configuraciones
+
+version: "3.0"
+
+services:
+    mongodb: # Este nombre es un nombre de red que permite atacar a este contenedor desde otros
+        container_name: mimongo
+        image: mongo:latest
+        ports:
+            - 27017:27017
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: usuario
+            MONGO_INITDB_ROOT_PASSWORD: password
+        volumes:
+            - /home/ubuntu/environment/curso:/curso
+
+    mongo-express:
+        image: mongo-express:latest
+        container_name: mimongoexpress
+        ports:
+            - 8080:8081
+        environment:
+            ME_CONFIG_MONGODB_ADMINUSERNAME: usuario
+            ME_CONFIG_MONGODB_ADMINPASSWORD: password
+            ME_CONFIG_MONGODB_URL: mongodb://usuario:password@mongodb:27017/
+
+# fuera en mi ordenador, bastanría ahora con abrir un navegador de internet: Chrome:
+# Y poner en la barra de direcciones: http://localhost:8080

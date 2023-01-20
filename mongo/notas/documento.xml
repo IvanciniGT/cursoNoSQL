@@ -1,0 +1,12 @@
+<usuarios>
+    <usuario>
+        <nombre>Ivan</nombre>
+        <apellidos>Osuna Ayuste</apellidos>
+        <edad>44</edad>
+    </usuario>
+    <usuario>
+        <nombre>Eduardo</nombre>
+        <apellidos>Castro Apablaza</apellidos>
+        <edad>37</edad>
+    </usuario>
+</usuarios>

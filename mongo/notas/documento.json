@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Ivan",
+        "apellidos": "Osuna Ayuste",
+        "edad": 44,
+        "padres": [
+            {
+                "nombre": "Isidoro",
+                "apellidos": "Osuna"
+            },
+            {
+                "nombre": "María de los Ángeles",
+                "apellidos": "Ayuste"
+            }
+        ]
+    },
+    {
+        "nombre": "Eduardo",
+        "apellidos": "Castro Apablaza",
+        "edad": 37
+    }
+]

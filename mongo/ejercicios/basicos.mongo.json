@@ -1,0 +1,29 @@
+# Me conecto a la BBDD "admin"
+use admin
+
+# Hago una query en la coleccion "system.users" de la BBDD en la que me encuentro (que según el comando anterior es "admin")
+db.getCollection("system.users").find()
+
+[
+  {
+    _id: 'admin.usuario',
+    userId: new UUID("5447804d-68c9-43d5-b1f6-499cfe9a063a"),
+    user: 'usuario',
+    db: 'admin',
+    credentials: {
+      'SCRAM-SHA-1': {
+        iterationCount: 10000,
+        salt: '39CNrnFs94Lq1vmp4ll+4A==',
+        storedKey: 'iSPpj0AgJzSHhcDK45Y9kcBZpbU=',
+        serverKey: 'W1cBojx3g9zX/AtFSf+3d3p2XhU='
+      },
+      'SCRAM-SHA-256': {
+        iterationCount: 15000,
+        salt: 'sf233QHPVbSvmMOAyCHbUfy1OkWKYIFnf7vA0w==',
+        storedKey: 'hzL+oAv4dKi1jtOC6icEaZTOZZw19tENDtlbNzSjs/0=',
+        serverKey: '9KH/hyxxn0SHbsFAJgYEcLI6LuSRhmC+lxzNtOO9YFk='
+      }
+    },
+    roles: [ { role: 'root', db: 'admin' } ]
+  }
+]

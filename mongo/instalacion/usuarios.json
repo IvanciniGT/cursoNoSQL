@@ -1,0 +1,34 @@
+[
+    {
+        "_id":"admin.usuario"
+        "userId":{
+            "$binary":{
+                "base64":"VEeATWjJQ9Wx9kmc/poGOg=="
+                "subType":"04"
+            }
+        }
+        "user":"usuario"
+        "db":"admin"
+        "credentials":{
+            "SCRAM-SHA-1":{
+                "iterationCount":10000
+                "salt":"39CNrnFs94Lq1vmp4ll+4A=="
+                "storedKey":"iSPpj0AgJzSHhcDK45Y9kcBZpbU="
+                "serverKey":"W1cBojx3g9zX/AtFSf+3d3p2XhU="
+            
+            }
+            "SCRAM-SHA-256":{
+                "iterationCount":15000
+                "salt":"sf233QHPVbSvmMOAyCHbUfy1OkWKYIFnf7vA0w=="
+                "storedKey":"hzL+oAv4dKi1jtOC6icEaZTOZZw19tENDtlbNzSjs/0="
+                "serverKey":"9KH/hyxxn0SHbsFAJgYEcLI6LuSRhmC+lxzNtOO9YFk="
+            }
+        }
+        "roles":[
+            {
+                "role":"root"
+                "db":"admin"
+            }
+        ]
+    }
+]
